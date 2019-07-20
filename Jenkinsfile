@@ -22,11 +22,11 @@ pipeline {
                                 }    
                         }
                         stage('Four') {
-                                        parallel {
-                                              stage('Unit Test') {
-                                                                  echo "Running the unit test"
-                                              }      
-                                        }      
+                                        
+                                       stage('Unit Test') {
+                                                             echo "Running the unit test"
+                                       }      
+                                              
                         }
 
 
