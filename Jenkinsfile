@@ -1,32 +1,16 @@
 pipeline {
         agent any
                 stages {
-                        stage('One') {
-                                steps {
-                                        echo 'Hi, This is my first pipeline'                                     
-                                }
+                        stage('Scm Checkout') {
+                          git 'https://github.com/javahometech/my-app'
                         }
-                        stage('Two') {
-                                steps {
-                                        input('Do you want to proceed?')
-                                }
+                        stage('Compile-package'){
+                                def mvnHome = tool name: 'maven', type: 'maven
+                                sh "${mvnHome}/bin/mvn package"
                         }
-                        stage('Three') {
-                                steps {
-                                       echo "Hello"
-                                }    
-                        }
-                        stage('Four') {
-                                        
-                                steps {
-                                       echo "Running the unit test"
-                                }   
-                                              
-                        }
-
-
-
+                }
 }
-
-}
+                        
+                          
+                     
         
