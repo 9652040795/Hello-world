@@ -5,8 +5,8 @@ pipeline {
                           git 'https://github.com/javahometech/my-app'
                         }
                         stage('Compile-package'){
-                                def mvnHome = tool name: 'maven', type: 'maven
-                                sh "${mvnHome}/bin/mvn package"
+                                def mavenHome = tool name: 'maven', type: 'maven
+                                sh "${mavenHome}/bin/mvn package"
                         }
                 }
 }
