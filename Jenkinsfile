@@ -3,7 +3,7 @@ pipeline {
    stages {
       stage('Scm Checkout') {
          steps {
-            git 'https://github.com/javahometech/my-app'
+            git 'https://github.com/9652040795/Hello-world'
          }
       
       }
